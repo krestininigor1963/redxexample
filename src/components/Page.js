@@ -11,14 +11,15 @@ export class Page extends React.Component {
 	render() {
 		const { year, photos } = this.props;
 		return (
-			<div>
-				<div>
-						<button onClick={this.onBtnClick}>2021</button>
-						<button onClick={this.onBtnClick}>2020</button>
-						<button onClick={this.onBtnClick}>2019</button>
-						<button onClick={this.onBtnClick}>2018</button>
-				</div>
-					<p>У тебя фоток {photos.length} за {year}</p>
+			<div className="ib page">
+				<p>
+					<button className="btn" onClick={this.onBtnClick}>2021</button>
+					<button className="btn" onClick={this.onBtnClick}>2020</button>
+					<button className="btn" onClick={this.onBtnClick}>2019</button>
+					<button className="btn" onClick={this.onBtnClick}>2018</button>
+				</p>
+				<h3>за {year}</h3>
+				<p>У тебя фоток {photos.length}</p>
 			</div>
 
 		);
@@ -26,7 +27,7 @@ export class Page extends React.Component {
 }
 
 Page.propTypes = {
-	year: PropTypes.number.isRequired,
-	photos: PropTypes.array.isRequired,
-    setYear: PropTypes.func.isRequired,
+  year: PropTypes.number.isRequired,
+  photos: PropTypes.array.isRequired,
+  setYear: PropTypes.func.isRequired,
 };
